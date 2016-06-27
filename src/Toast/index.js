@@ -1,17 +1,17 @@
 import _ from 'lodash'
 import classNames from 'classnames'
-import React, { PropTypes } from 'react';
+import React, { PropTypes } from 'react'
 
 import styles from './styles.css'
 
 const propTypes = {
   message: PropTypes.string,
   className: PropTypes.string,
-  timeout: PropTypes.number
-};
+  timeout: PropTypes.number,
+}
 
 const defaultProps = {
-  timeout: 3000
+  timeout: 3000,
 }
 
 class Toast extends React.Component {
@@ -31,7 +31,7 @@ class Toast extends React.Component {
 
   updateState({ message, timeout }) {
     this.setState({ isVisible: !_.isEmpty(message) })
-    setTimeout(() => this.setState({ isVisible: false }), timeout);
+    setTimeout(() => this.setState({ isVisible: false }), timeout)
   }
 
   render() {
@@ -48,7 +48,7 @@ class Toast extends React.Component {
   }
 }
 
-Toast.propTypes = propTypes;
-Toast.defaultProps = defaultProps;
+Toast.propTypes = propTypes
+Toast.defaultProps = defaultProps
 
-export default Toast;
+export default Toast

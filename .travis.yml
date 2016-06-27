@@ -9,6 +9,16 @@ branches:
 before_deploy:
 - npm run build
 
+addons:
+  code_climate:
+    repo_token: 09e2221d4909044a5168f8fbe1c9cf1877af77da3109d080b72063453ea79f17
+    
+before_script:
+- npm install -g codeclimate-test-reporter
+after_script:
+- npm run coverage
+- codeclimate-test-reporter < coverage/lcov.info
+
 deploy:
   provider: npm
   email: serveradmin@octoblu.com

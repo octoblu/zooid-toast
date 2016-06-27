@@ -1,6 +1,6 @@
 {
   "name": "zooid-toast",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Toast",
   "main": "dist/bundle.js",
   "scripts": {

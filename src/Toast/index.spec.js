@@ -32,20 +32,20 @@ describe('<Toast />', () => {
 
   describe('When isVisible state is set to true', () => {
     it('should render the message passed in as prop', () => {
-      const sut = shallow(<Toast message="Fancy Message" />)
+      const sut = mount(<Toast message="Fancy Message" />)
       expect(sut).to.have.text('Fancy Message')
     })
 
     it('should adopt the className passed in as prop', () => {
-      const sut = shallow(<Toast message="Message" className="I-AM-GROOT" />)
+      const sut = mount(<Toast message="Message" className="I-AM-GROOT" />)
       expect(sut).to.have.className('I-AM-GROOT')
     })
   })
 
   describe('When timeout prop is not specified', () => {
-    it('should set timeout prop to 3000ms by default', () => {
+    it('should set timeout prop to 4000ms by default', () => {
       const sut = mount(<Toast message="msg" />)
-      expect(sut.prop('timeout')).to.equal(3000)
+      expect(sut.prop('timeout')).to.equal(4000)
     })
   })
 

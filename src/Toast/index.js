@@ -1,17 +1,19 @@
 import _ from 'lodash'
 import classNames from 'classnames'
 import React, { PropTypes } from 'react'
+import { spring } from 'react-motion'
+import Transition from 'react-motion-ui-pack'
 
 import styles from './styles.css'
 
 const propTypes = {
-  message: PropTypes.string,
   className: PropTypes.string,
+  message: PropTypes.string,
   timeout: PropTypes.number,
 }
 
 const defaultProps = {
-  timeout: 3000,
+  timeout: 4000,
 }
 
 class Toast extends React.Component {
@@ -34,6 +36,20 @@ class Toast extends React.Component {
     setTimeout(() => this.setState({ isVisible: false }), timeout)
   }
 
+  willEnter() {
+    return {
+      height: spring('auto', { stiffness: 100, damping: 10 }),
+      opacity: 1,
+    }
+  }
+
+  willLeave() {
+    return {
+      height: 0,
+      opacity: -1,
+    }
+  }
+
   render() {
     const { className, message } = this.props
     const { isVisible } = this.state
@@ -41,9 +57,11 @@ class Toast extends React.Component {
     if (!isVisible) return null
 
     return (
-      <div className={classNames(styles.root, className)}>
-        <div className={styles.message}>{message}</div>
-      </div>
+      <Transition component={false} enter={this.willEnter()} leave={this.willLeave()}>
+        <div className={classNames(styles.root, className)} key="toast">
+          <span className={styles.message}>{message}</span>
+        </div>
+      </Transition>
     )
   }
 }

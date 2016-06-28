@@ -15,7 +15,7 @@ npm install --save zooid-toast
 | ----------| -------| --------| -------------------------------------|
 | className | string |         | Additional css classes to merge into the component |
 | message | string |         | Message to show. Should be concise. |
-| timeout | number |    3000  | timeout in milliseconds |
+| timeout | number |    4000  | timeout in milliseconds |
 
 
 ## Example

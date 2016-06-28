@@ -1,6 +1,6 @@
 {
   "name": "zooid-toast",
-  "version": "1.0.4",
+  "version": "2.0.0",
   "description": "Toast",
   "main": "dist/bundle.js",
   "scripts": {
@@ -87,6 +87,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "react": "^15.0.1"
+    "react": "^15.0.1",
+    "react-motion-ui-pack": "^0.8.0"
   }
 }

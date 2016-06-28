@@ -1,6 +1,6 @@
 .root {
   position: fixed;
-  bottom: 0;
+  bottom: 24px;
   left: 24px;
   cursor: default;
   background-color: #333;
@@ -9,7 +9,7 @@
   transform: translate(0, 0);
   transition: transform 0.25s ease;
   pointer-events: none;
-  width: 350px;
+  width: 280px;
 }
 
 .is-active {

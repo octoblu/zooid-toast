@@ -1,9 +1,12 @@
 # zooid-toast
 
 [![Build Status](https://travis-ci.org/octoblu/zooid-toast.svg?branch=master)](https://travis-ci.org/octoblu/zooid-toast)
-[![npm version](https://badge.fury.io/js/zooid-toast.svg)](http://badge.fury.io/js/zooid-toast)
-[![Code Climate](https://codeclimate.com/github/octoblu/zooid-toast.png)](https://codeclimate.com/github/octoblu/zooid-toast)
+[![Test Coverage](https://codecov.io/gh/octoblu/zooid-toast/branch/master/graph/badge.svg)](https://codecov.io/gh/octoblu/zooid-toast)
+[![Dependency status](http://img.shields.io/david/octoblu/zooid-toast.svg?style=flat)](https://david-dm.org/octoblu/zooid-toast)
+[![devDependency Status](http://img.shields.io/david/dev/octoblu/zooid-toast.svg?style=flat)](https://david-dm.org/octoblu/zooid-toast#info=devDependencies)
 [![Slack Status](http://community-slack.octoblu.com/badge.svg)](http://community-slack.octoblu.com)
+
+[![NPM](https://nodei.co/npm/zooid-toast.svg?style=flat)](https://npmjs.org/package/zooid-toast)
 
 ## Install
 ```
